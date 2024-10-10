@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #7604aa;}
+
+ul.topnav li.right {float: right;}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.column.side {
+  width: 50%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#jsonInput {
+  width: 100%;
+  height: 400px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+#editor {
+  height: 500px;
+  width: 100%;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+.CodeMirror {
+  height: 100%;
+}
+
+.footer {
+  background-color: #333;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  .column.side, .column.middle {width: 100%;}
+}

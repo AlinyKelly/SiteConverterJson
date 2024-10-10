@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter with CodeMirror</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldcode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/brace-fold.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/fold/foldgutter.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>JSON Formatter</h1>
+        <p>
+            This formatter is used for teaching purposes.
+            <br>
+            I use it to format a JSON that contains a field with JSON that was inserted into a CLOB field. With replace I remove the "\" character and thus I can format all the content, improving visualization.
+        </p>
+    </div>
+
+    <ul class="topnav">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="" target="_blank">Repository on GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/alinykelly/" target="_blank">Contact</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="column side">
+            <textarea id="jsonInput" placeholder="Paste your JSON string here"></textarea><br>
+
+            <button id="formatBtn">Format JSON</button>
+        </div>
+
+        <div class="column middle">
+            <!-- Editor for Formatted JSON -->
+            <div id="editor"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>"A simplicidade é o último grau de sofisticação." – Leonardo da Vinci</p>
+    </footer>
+
+</body>
+
+<script src="./js/formatJson.js"></script>
+
+</html>
